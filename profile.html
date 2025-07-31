@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile</title>
+  <link rel="stylesheet" href="./css/profile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <div class="top-bar">
+      <i class="fas fa-chevron-left"></i>
+      <span>Profile</span>
+    </div>
+
+    <div class="profile-info">
+      <div class="avatar-wrapper">
+        <img src="./img/moana.jpg" alt="Profile Picture" class="avatar">
+        <i class="fas fa-camera camera-icon"></i>
+      </div>
+      <h2>Jane Smith</h2>
+      <p>smithjane@gmail.com</p>
+    </div>
+
+    <div class="options">
+      <div class="option">
+        <i class="fas fa-user"></i>
+        <span>Personal Details</span>
+        <i class="fas fa-chevron-right right-arrow"></i>
+      </div>
+
+      <div class="option">
+        <div class="left">
+        <i class="fas fa-bell"></i>
+        <span>Notification</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="option">
+        <i class="fas fa-shield-alt"></i>
+        <span>Privacy and Security</span>
+        <i class="fas fa-chevron-right right-arrow"></i>
+      </div>
+
+      <div class="option">
+        <i class="fas fa-info-circle"></i>
+        <span>About</span>
+        <i class="fas fa-chevron-right right-arrow"></i>
+      </div>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">Log Out</button>
+
+    <nav class="bottom-nav">
+      <div class="nav-item">
+        <a href="./home.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center;">
+          <img src="./img/homeicon.png" alt="Home">
+          <span>Home</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <img src="./img/book.png" alt="Book">
+        <span>Lesson</span>
+      </div>
+      <div class="nav-item active">
+        <img src="./img/profvio.png" alt="Profile">
+        <span>Profile</span>
+      </div>
+    </nav>
+  </div>
+
+  <script>
+    function logout() {
+      // Redirect to splash page
+      window.location.href = './index.html';
+    }
+  </script>
+</body>
+</html>
