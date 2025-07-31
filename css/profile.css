@@ -1,0 +1,168 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #e3adf7;
+  color: #000;
+}
+
+.profile-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 16px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.camera-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.options {
+  margin-top: 30px;
+ 
+}
+
+.option {
+  background: #dcdcdc;
+  border-radius: 25px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.option i {
+  margin-right: 15px;
+}
+
+.right-arrow {
+  margin-left: auto;
+}
+
+.logout-btn {
+  display: block;
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px 0;
+}
+
+.nav-item {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  font-size: 14px;
+}
+
+.nav-item i {
+  font-size: 20px;
+}
+
+.nav-item.active {
+  color: #a142f5;
+  display:flex;
+  flex-direction: column;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #999;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #000;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(21px);
+}
